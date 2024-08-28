@@ -1,0 +1,73 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: bisque;
+}
+
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  top: 5%;
+  width: 400px;
+  padding: 20px;
+  gap: 15px;
+}
+
+#display {
+  left: 5%;
+  top: 3%;
+  position: relative;
+  width: 80%;
+  padding: 20px;
+  font-family: Tahoma;
+  font-size: large;
+}
+
+.calculator {
+  background-color: rgb(4, 69, 69);
+  align-items: center;
+  height: 600px;
+  border-radius: 3%;
+  overflow: hidden;
+  font-size: Tahoma;
+}
+
+button {
+  width: 80px;
+  height: 80px;
+  border-radius: 30%;
+  font-size: large;
+  font-family: Tahoma;
+  font-weight: bold;
+  background-color: rgb(67, 66, 66);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(91, 87, 87);
+}
+
+button:active {
+  background-color: rgb(131, 128, 128);
+}
+
+.equal {
+  background-color: rgb(7, 168, 50);
+}
+
+.history {
+  background-color: rgb(7, 168, 50);
+}
+.operations {
+  background-color: rgb(191, 129, 15);
+}
+.AC {
+  background-color: brown;
+}
+.DEL {
+  background-color: brown;
+}
