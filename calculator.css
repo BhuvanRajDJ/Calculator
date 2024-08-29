@@ -71,3 +71,25 @@ button:active {
 .DEL {
   background-color: brown;
 }
+
+#history {
+  width: 300px;
+  color: rgb(255, 255, 255);
+  font-family: Tahoma;
+  background-color: rgb(4, 69, 69);
+
+  text-align: left;
+  border-radius: 3%;
+  overflow: hidden;
+  padding-left: 1.5%;
+}
+
+#history h1 {
+  padding-left: 1.5%;
+  color: brown;
+  font-family: Tahoma;
+}
+
+#history li {
+  padding: 10px;
+}
