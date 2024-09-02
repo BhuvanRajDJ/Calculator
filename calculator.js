@@ -4,20 +4,24 @@ const historyList = document.createElement("ul");
 historyElement.appendChild(historyList);
 
 let history = [];
-function addelementtodisplay(input) {
-  display.value += input;
-}
 
-function Calculate(input) {
-  display.value += input;
+function addelementtodisplay(input) {
+  if (display.value !== "Error") {
+    display.value += input;
+  } else {
+    display.value = input;
+  }
 }
 
 function Calculate1() {
   try {
     const result = eval(display.value);
+    if (result === Infinity) {
+      throw new Error("Infinity");
+    }
     addToHistory(display.value, result);
     display.value = result;
-  } catch {
+  } catch (e) {
     display.value = "Error";
   }
 }
@@ -27,7 +31,11 @@ function clearDisplay() {
 }
 
 function deleteprevelement() {
-  display.value = display.value.slice(0, -1);
+  if (display.value !== "Error") {
+    display.value = display.value.slice(0, -1);
+  } else {
+    display.value = "";
+  }
 }
 
 function addToHistory(expression, result) {
